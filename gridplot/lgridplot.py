@@ -12,7 +12,7 @@ def figure_to_image(figure):
 def plot_lgrid(images, labels, cols, axis=True):
     rows = round(len(images) / cols + 0.49)
 
-    fig, axs = plt.subplots(rows, cols)
+    fig, axs = plt.subplots(rows, cols, figsize=(3 * cols, 3 * rows))
     axs = axs.ravel()
 
     for ax, image, label in zip(axs, images, labels):
